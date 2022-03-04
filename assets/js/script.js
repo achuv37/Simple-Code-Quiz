@@ -8,7 +8,7 @@
 // 6. A text displays "wrong" when the user clicks the wrong answer.
 // 7. Display final score based on user's right answers.
 // 8. Show the user leftover time, which is subtracted from final score.
-// 9. All done function appears when leftover time reaches 0.
+// 9. Quiz over function appears when leftover time reaches 0 and question lenth reaches 0.
 // 10. Display final scores with initials.
 // 11. set local storage.
 // 12. Display High score.
@@ -63,6 +63,7 @@ timer.addEventListener("click",function () {
 
       if(timeInterval<0) {
         clearInterval(timeInterval);
+        quizOver();
         currentTime.textContent = "Time up !";
       }
     },1000);
@@ -113,6 +114,7 @@ function comparison(event) {
   questionIndex++;
   // End of question
   if(questionIndex >= questions.length) {
+    quizOver();
     divEl.textContent = " End of Quiz ! " + "" + " you got " + score + "/" + questions.length + "correct!";
   }
   else {
@@ -120,5 +122,26 @@ function comparison(event) {
   }
   questionContainer.appendChild(divEl);
 } 
+
+// Function for quizOver 
+function quizOver() {
+  // checking
+  questionContainer.innerHTML = "";
+  currentTime.innerHTML = "";
+  // Display Quiz over 
+  var newHl = document.createElement("h1")
+  newHl.setAttribute("id", "endQuiz");
+  newHl.textContent = "Quiz Over!";
+  questionContainer.appendChild(newHl);
+  // Display final score to the user.
+  if (secondsLeft >= 0) {
+    var timeLeft = secondsLeft;
+    var newPl = document.createElement("p");
+    clearInterval(timeInterval);
+    newPl.textContent = "Your final score is : "  + timeLeft;
+    questionContainer.appendChild(newPl);
+  
+  }
+}
 
 
