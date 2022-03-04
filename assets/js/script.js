@@ -50,8 +50,20 @@ var timeInterval = 0;
 var penalty = 10;
 var secondsLeft = 76; // 15 seconds per question + 1;
 var ulEl = document.createElement("ul"); // create new ul element
-console.log(questionEl);
-console.log(containerEl);
-console.log(timer);
-console.log(currentTime);
-console.log(ulEl);
+
+// Set a timer to a button with a starting value of 0. It displays on the screen.
+timer.addEventListener("click",function () {
+  // checking and displays the leftover time to user
+  if(timeInterval ===0) {
+    timeInterval = setInterval(function() {
+      secondsLeft--;
+      currentTime.textContent = "Time: " + secondsLeft;
+      
+      if(timeInterval<0) {
+        clearInterval(timeInterval);
+        currentTime.textContent = "Time up !";
+      }
+    },1000);
+  }    
+    
+});
