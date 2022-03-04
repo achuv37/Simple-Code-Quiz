@@ -51,19 +51,42 @@ var penalty = 10;
 var secondsLeft = 76; // 15 seconds per question + 1;
 var ulEl = document.createElement("ul"); // create new ul element
 
-// Set a timer to a button with a starting value of 0. It displays on the screen.
+// Set a timer to a button with a starting value of 0. Seconds left displays on the screen.
 timer.addEventListener("click",function () {
   // checking and displays the leftover time to user
   if(timeInterval ===0) {
     timeInterval = setInterval(function() {
       secondsLeft--;
       currentTime.textContent = "Time: " + secondsLeft;
-      
+
       if(timeInterval<0) {
         clearInterval(timeInterval);
         currentTime.textContent = "Time up !";
       }
     },1000);
-  }    
-    
+  } 
+  show(questionIndex);   
 });
+//Function for showing question and options to the user.
+function show(questionIndex) {
+// Questions will appear inside the questionContainer, we need to clear it before starting.
+  questionContainer.innerHTML = "";
+  ulEl.innerHTML = "";
+// Using for loop to loop through the questions array.
+  for(var i=0; i<questions.length; i++) {
+    var askQuestion = questions[questionIndex].title;
+    var userOption = questions[questionIndex].options;
+    questionContainer.textContent = askQuestion;
+  }
+/* Options are in a array. so we need to display the options as  list elements for users.
+The forEach () method calls a function for each element in an array */
+userOption.forEach (function (newEl) {
+  var listEl = document.createElement("li");
+  listEl.textContent = newEl;
+  questionContainer.appendChild(ulEl);
+  ulEl.appendChild(listEl);
+});
+
+}
+
+
