@@ -3,13 +3,15 @@
 // 1. Set a timer to a button with a starting value of 0.
 // 2. Set a countdown for starting the Quiz.
 // 3. When the user clicks on Start Quiz button, then questions will appear with choices.
-// 4. A text displays "correct" when the user clicks the right answer.
-// 5. A text displays "wrong" when the user clicks the wrong answer.
-// 6. Display final score based on user's right answers.
-// 7. Show the user leftover time, which is subtracted from final score.
-// 8. Display final scores with initials.
-// 9. set local storage.
-// 10. Display High score.
+// 4. A comparison function checks user option with right answer.
+// 5. A text displays "correct" when the user clicks the right answer.
+// 6. A text displays "wrong" when the user clicks the wrong answer.
+// 7. Display final score based on user's right answers.
+// 8. Show the user leftover time, which is subtracted from final score.
+// 9. All done function appears when leftover time reaches 0.
+// 10. Display final scores with initials.
+// 11. set local storage.
+// 12. Display High score.
 
 // creating a object questions
 var questions = [
@@ -67,6 +69,7 @@ timer.addEventListener("click",function () {
   } 
   show(questionIndex);   
 });
+
 //Function for showing question and options to the user.
 function show(questionIndex) {
 // Questions will appear inside the questionContainer, we need to clear it before starting.
@@ -85,8 +88,37 @@ userOption.forEach (function (newEl) {
   listEl.textContent = newEl;
   questionContainer.appendChild(ulEl);
   ulEl.appendChild(listEl);
+  listEl.addEventListener("click", (comparison));
 });
-
 }
+
+// creating a new function comparison, it compares the userOption with answer.
+function comparison(event) {
+  var element = event.target;
+  if(element.matches("li")) {
+    var divEl = document.createElement("div");
+    divEl.setAttribute("id", "newDiv");
+  // checking userOption : correct condition
+    if(element.textContent == questions[questionIndex].answer) {
+      score++;
+      divEl.textContent = "Correct answer!"
+    } 
+    // wrong condition: Subtract 10 seconds from secondsLeft
+    else {
+      secondsLeft = secondsLeft - penalty;
+      divEl.textContent = " Wrong answer! The answer is : " + questions[questionIndex].answer;
+    }
+  }
+  // Next Question
+  questionIndex++;
+  // End of question
+  if(questionIndex >= questions.length) {
+    divEl.textContent = " End of Quiz ! " + "" + " you got " + score + "/" + questions.length + "correct!";
+  }
+  else {
+    show(questionIndex);
+  }
+  questionContainer.appendChild(divEl);
+} 
 
 
