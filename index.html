@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Link to stylesheet-->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!--Title of the Website-->
-  <title>Code-Quiz-Generator</title>
-</head>
-<body>
-  <div id="container">
-    <div id="questionContainer">
-      <h1>Coding-Quiz-challenge</h1>
-      <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answer will penalize your score/time by ten seconds!</p>
-      <ul id="answerChoices"></ul>
-    <!--Start-Quiz Button-->
-      <button id="startQuiz">Start Quiz</button>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link to stylesheet-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--Title of the Website-->
+    <title>Code-Quiz-Generator</title>
+  </head>
+  <body>
+    <div id="container">
+      <!--Timer Section-->
+      <div id="currentTime"></div>
+      <!--Question-container-->
+      <div id="questionContainer">
+        <h1>Coding-Quiz-challenge</h1>
+        <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answer will penalize your score/time by ten seconds!</p>
+        <ul id="answerChoices"></ul>
+    
+      <!--Start-Quiz Button-->
+        <button id="startQuiz">Start Quiz</button>
+      </div>
     </div>
-  </div>
+
   <!--Link to Javascript file-->
-  <script src="./assets/js/script.js"></script>   
-</body>
+    
+    <script src="./assets/js/script.js "></script>
+  </body>
 </html>

@@ -28,6 +28,11 @@ button {
   padding: 15px 25px;
   margin-top: 50px;
 }
+/* Question-container */
 #questionContainer {
   margin: 20px;
+}
+/* Time */
+#currentTime {
+  float: Right;
 }
