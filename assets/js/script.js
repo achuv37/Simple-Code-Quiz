@@ -17,27 +17,27 @@
 var questions = [
   {
     title: "Which symbol is used to separate JavaScript statements?",
-    options: ["1.Comma","2.Colon","3.Hyphen","4.Semicolon"],
+    options: ["Comma","Colon","Hyphen","Semicolon"],
     answer: "Semicolon"
   },
   {
     title: "JavaScript ignores ?",
-    options: ["1.Newlines","2.Tabs","3.Spaces","4.All of the above"],
+    options: ["Newlines","Tabs","Spaces","All of the above"],
     answer: "All of the above"
   },
   {
     title: "Which JavaScript method is used to write on browser's console?",
-    options: ["1.console.write()","2.console.output()","3.console.log()","4.console.writeHTML()"],
+    options: ["console.write()","console.output()","console.log()","console.writeHTML()"],
     answer: "console.log()"
   },
   {
     title: "In JavaScript, single line comment begin with ?",
-    options: ["1.#","2./*","3.$","4.//"],
+    options: ["#","/*","$","//"],
     answer: "//"
   },
   {
     title: "Which JavaScript keyword is used to declare a variable?",
-    options: ["1.Var","2.var","3.Let","4.All of the above"],
+    options: ["Var","var","Let","All of the above"],
     answer: "var"
   },
 ];
@@ -61,7 +61,7 @@ timer.addEventListener("click",function () {
       secondsLeft--;
       currentTime.textContent = "Time: " + secondsLeft;
 
-      if(timeInterval<0) {
+      if(timeInterval<=0) {
         clearInterval(timeInterval);
         quizOver();
         currentTime.textContent = "Time up !";
@@ -140,8 +140,28 @@ function quizOver() {
     clearInterval(timeInterval);
     newPl.textContent = "Your final score is : "  + timeLeft;
     questionContainer.appendChild(newPl);
-  
   }
+  // creating input field for initial.
+    var labelEl = document.createElement("label");
+    labelEl.setAttribute("id","labelPart");
+    labelEl.textContent ="Enter your initials";
+    questionContainer.appendChild(labelEl);
+
+    var inputEl = document.createElement("input");
+    inputEl.setAttribute("type","text");
+    inputEl.setAttribute("id","initials");
+    inputEl.textContent = "";
+    questionContainer.appendChild(inputEl);
+
+  // submit button
+    var submitEl = document.createElement("submit");
+    submitEl.setAttribute("type","submit");
+    submitEl.setAttribute("id","submitPart");
+    submitEl.textContent = "Submit";
+    questionContainer.appendChild(submitEl);
+
+
+  
 }
 
 

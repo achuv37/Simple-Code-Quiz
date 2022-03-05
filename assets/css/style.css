@@ -1,4 +1,8 @@
 /* General Styling */
+body {
+  font-size: 20px;
+  font-weight: bold;
+}
 h1 {
   text-align: center;
 }
@@ -8,6 +12,22 @@ p {
 }
 button {
   border-radius: 10px;
+}
+label {
+  margin-right: 10px;
+}
+input {
+  width: 28%;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+#submitPart {
+  color: white;
+  background-color: blue;
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-left: 8px; 
 }
 /* Container styling */
 #container {
