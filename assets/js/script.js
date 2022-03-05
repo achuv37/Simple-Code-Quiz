@@ -144,7 +144,7 @@ function quizOver() {
   // creating input field for initial.
     var labelEl = document.createElement("label");
     labelEl.setAttribute("id","labelPart");
-    labelEl.textContent ="Enter your initials";
+    labelEl.textContent ="Enter your initials:";
     questionContainer.appendChild(labelEl);
 
     var inputEl = document.createElement("input");
