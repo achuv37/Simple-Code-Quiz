@@ -154,14 +154,28 @@ function quizOver() {
     questionContainer.appendChild(inputEl);
 
   // submit button
-    var submitEl = document.createElement("submit");
+    var submitEl = document.createElement("button");
     submitEl.setAttribute("type","submit");
     submitEl.setAttribute("id","submitPart");
     submitEl.textContent = "Submit";
     questionContainer.appendChild(submitEl);
-
-
   
+  // Event listener to submit initials
+    submitEl.addEventListener("click",function () {
+      var initials = inputEl.value;
+      if(!initials) {
+        window.alert("Enter your Initial");
+      } else {
+          var newEntry = {
+          initials: initials,
+          score: timeLeft
+        }
+          var localStorageHighScores = JSON.parse(localStorage.getItem("localStorageHighScores")) || [] ;
+          localStorageHighScores.push(newEntry);
+          localStorage.setItem("localStorageHighScores", JSON.stringify(localStorageHighScores));
+          location.href = "highScore.html";
+      }
+    });
 }
 
 
