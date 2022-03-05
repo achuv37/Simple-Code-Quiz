@@ -166,14 +166,19 @@ function quizOver() {
       if(!initials) {
         window.alert("Enter your Initial");
       } else {
+      // create a variable newEntry and set it equal to an object with two key value pairs.
           var newEntry = {
           initials: initials,
           score: timeLeft
         }
+      // If this value does not exit, then set localStorageHighScores to an empty array. 
           var localStorageHighScores = JSON.parse(localStorage.getItem("localStorageHighScores")) || [] ;
+      // push newEntry into localStorageHighScores.  
           localStorageHighScores.push(newEntry);
+      // set localStorageHighScores into local storage with the key name of "localStorageHighScores"
           localStorage.setItem("localStorageHighScores", JSON.stringify(localStorageHighScores));
-          location.href = "highScore.html";
+      // Redirect the user to "highScores.html"
+          location.href = "highScores.html";
       }
     });
 }
