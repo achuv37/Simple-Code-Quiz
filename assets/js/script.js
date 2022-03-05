@@ -17,27 +17,27 @@
 var questions = [
   {
     title: "Which symbol is used to separate JavaScript statements?",
-    options: ["Comma","Colon","Hyphen","Semicolon"],
+    options: ["1.Comma","2.Colon","3.Hyphen","4.Semicolon"],
     answer: "Semicolon"
   },
   {
     title: "JavaScript ignores ?",
-    options: ["Newlines","Tabs","Spaces","All of the above"],
+    options: ["1.Newlines","2.Tabs","3.Spaces","4.All of the above"],
     answer: "All of the above"
   },
   {
     title: "Which JavaScript method is used to write on browser's console?",
-    options: ["console.write()","console.output()","console.log()","console.writeHTML()"],
+    options: ["1.console.write()","2.console.output()","3.console.log()","4.console.writeHTML()"],
     answer: "console.log()"
   },
   {
     title: "In JavaScript, single line comment begin with ?",
-    options: ["#","/*","$","//"],
+    options: ["1.#","2./*","3.$","4.//"],
     answer: "//"
   },
   {
     title: "Which JavaScript keyword is used to declare a variable?",
-    options: ["Var","var","Let","All of the above"],
+    options: ["1.Var","2.var","3.Let","4.All of the above"],
     answer: "var"
   },
 ];
