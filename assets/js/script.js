@@ -9,7 +9,7 @@
 // 7. Display final score based on user's right answers.
 // 8. Show the user leftover time, which is subtracted from final score.
 // 9. Quiz over function appears when leftover time reaches 0 and question lenth reaches 0.
-// 10. Display final scores with initials.
+// 10. Display  score with initials.
 // 11. set local storage.
 // 12. Display High score.
 
@@ -95,6 +95,7 @@ userOption.forEach (function (newEl) {
 
 // creating a new function comparison, it compares the userOption with answer.
 function comparison(event) {
+  event.preventDefault();
   var element = event.target;
   if(element.matches("li")) {
     var divEl = document.createElement("div");
