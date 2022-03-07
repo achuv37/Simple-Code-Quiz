@@ -18,6 +18,10 @@ button {
   padding: 15px 25px;
   margin-top: 50px;
 }
+/* Pseudo class added to button element */
+button:hover {
+  background-color: lightblue;
+}
 label {
   margin-right: 10px;
 }
@@ -26,6 +30,7 @@ input {
   margin-bottom: 20px;
   border: 2px solid black;
 }
+/*Submit */
 #submitPart {
   color: white;
   background-color: blue;
@@ -45,9 +50,7 @@ input {
   text-align: center;
   
 }
-
-
-/* Question-container */
+/*Question-container */
 #questionContainer {
   margin: 10px;
 }
@@ -66,6 +69,10 @@ li {
   padding: 8px 18px; 
   text-align: left;
 }
+li:hover {
+  background-color: lightblue;
+}
+/* Div styling: Displays answer is correct/wrong */
 #newDiv {
   border-top: 2px solid black;
   font-size: 18px;

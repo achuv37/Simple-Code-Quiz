@@ -7,7 +7,7 @@ clear.addEventListener("click", function() {
   localStorage.clear();
   
 });
-
+//storing data from local storage in to an array of objects.
 var localStorageHighScores = localStorage.getItem("localStorageHighScores");
 localStorageHighScores = JSON.parse(localStorageHighScores);
 
