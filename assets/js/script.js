@@ -61,7 +61,7 @@ timer.addEventListener("click",function () {
       secondsLeft--;
       currentTime.textContent = "Time: " + secondsLeft;
 
-      if(timeInterval<=0) {
+      if(secondsLeft<=0) {
         clearInterval(timeInterval);
         quizOver();
         currentTime.textContent = "Time up !";
