@@ -1,1 +1,11 @@
 # Simple-Code-Quiz-Generator
+This is a website of Simple-Timed-Code-Quiz on JavaScript fundamentals that stores high scores. 
+## Description 
+* A Simple-Timed-Code_quiz, This code-quiz contains 5 questions and 15 seconds for each questions, so declared a global variable "secondsLeft" with initial value of 76. Then set a timer to the startQuiz button element with a starting value of "0".The JavaScript setInterval () method executes a specified function multiple times at set time intervals specified in milliseconds.The JS setInterval () method will keep calling the function until clearInterval () method is called.
+*created a function "show" for showing question and options to the user. Questions will appear inside the question container. For loop is used to loop through the questions.Options are in a array. so we need to display the options as  list elements for users.The forEach () method calls a function for each element in an array.
+* Created the function "comparison" for comparing the user option with answer. The event.target property returns which DOM element triggered the event. This property is used to compare. If the user answered wrongly,then the subtract penalty from secondsLeft. At the end of quiz,displays the user correct answer out of total questions.
+* Created another function "quizOver", for showing final score of the user. It allows user to enter the initials and highScore displays with initials.
+* Finally, saves the initials and score to local storage. created a variable newEntry and set it equal to an object with two key value pairs. Used array.push method to push newEntry into localStorageHighScores. set localStorageHighScores into local storage with the key name of "localStorageHighScores".
+* Redirects the user to another Html file "highScore.html" which displays h1 heading "High Score" with user entered initials and scores. localStorage.getItem() method returns the value of the storage object item.
+* Created two buttons in highScore.html file, "clear and back". clear button clears the localStorage and back button redirects the user to the index.html file.
+
