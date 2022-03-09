@@ -1,5 +1,18 @@
 # Simple-Code-Quiz-Generator
 This is a website of Simple-Timed-Code-Quiz on JavaScript fundamentals that stores high scores. 
+## Pseudo code 
+   1. Set a timer to a button with a starting value of 0.
+   2. Set a countdown for starting the Quiz.
+   3. When the user clicks on Start Quiz button, then questions will appear with choices.
+   4. A comparison function checks user option with right answer.
+   5. A text displays "correct" when the user clicks the right answer.
+   6. A text displays "wrong" when the user clicks the wrong answer.
+   7. Display final score based on user's right answers.
+   8. Show the user leftover time, which is subtracted from final score.
+   9. Quiz over function appears when leftover time reaches 0 and question     length reaches 0.
+   10. Display  score with initials.
+   11. set local storage.
+   12. Display High score.
 ## Description 
 * A Simple-Timed-Code_quiz, This code-quiz contains 5 questions and 15 seconds for each questions, so declared a global variable "secondsLeft" with initial value of 76. Then set a timer to the startQuiz button element with a starting value of "0".The JavaScript setInterval () method executes a specified function multiple times at set time intervals specified in milliseconds.The JS setInterval () method will keep calling the function until clearInterval () method is called.
 *created a function "show" for showing question and options to the user. Questions will appear inside the question container. For loop is used to loop through the questions.Options are in a array. so we need to display the options as  list elements for users.The forEach () method calls a function for each element in an array.

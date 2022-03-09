@@ -58,7 +58,7 @@ input {
 #questionContainer {
   margin: 10px;
 }
-/* Time */
+/* Time: Shows timer */
 #currentTime {
   float: Right;
   margin: 10px;
