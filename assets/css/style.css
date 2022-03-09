@@ -10,6 +10,9 @@ p {
   text-align: center;
   font-size: 18px;
 }
+a {
+  font-size: 15px;
+}
 button {
   border-radius: 10px;
   background-color: blue;
@@ -22,6 +25,7 @@ button {
 button:hover {
   background-color: lightblue;
 }
+/* Label, Input, for entering initial */
 label {
   margin-right: 10px;
 }
@@ -41,8 +45,8 @@ input {
 }
 /* Container styling */
 #container {
-  width: 500px;
-  height:500px;
+  width: 600px;
+  height:600px;
   border: 2px solid black;
   position: absolute;
   left: 350px;
@@ -94,8 +98,14 @@ li:hover {
   }
   li {
     font-size: 10px;
+    width: 60%;
+    border-radius: 8px;
+    padding: 5px 8px;
+    text-align: center;
+    
   }
   button {
     font-size: 10px;
+    padding: 5px 10px;
   }
 }

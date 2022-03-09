@@ -95,6 +95,7 @@ userOption.forEach (function (newEl) {
 
 // creating a new function comparison, it compares the userOption with answer.
 function comparison(event) {
+  //The event.preventDefault () method stops the default action of an element from happening.
   event.preventDefault();
   var element = event.target;
   if(element.matches("li")) {
