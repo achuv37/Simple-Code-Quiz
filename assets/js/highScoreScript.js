@@ -2,12 +2,12 @@ var viewScore = document.getElementById("viewScore");
 var back = document.getElementById("back");
 var clear = document.getElementById("clear");
 
-// eventListener clears the scores.
+// EventListener clears the scores.
 clear.addEventListener("click", function() {
   localStorage.clear();
   
 });
-//storing data from local storage in to an array of objects.
+//Storing data from local storage in to an array of objects.
 var localStorageHighScores = localStorage.getItem("localStorageHighScores");
 localStorageHighScores = JSON.parse(localStorageHighScores);
 
@@ -18,7 +18,7 @@ if(localStorageHighScores !== null) {
     viewScore.appendChild(newListEl);
   }
 }
-// eventListener to back 
+// EventListener to back 
 back.addEventListener("click", function() {
   location.href = "index.html";
 });
