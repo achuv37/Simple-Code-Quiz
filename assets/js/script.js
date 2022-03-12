@@ -65,8 +65,9 @@ timer.addEventListener("click",function () {
         clearInterval(timeInterval);
         quizOver();
         currentTime.textContent = "Time up !";
+        
       }
-    },1000);
+      },1000);
   } 
   show(questionIndex);   
 });
